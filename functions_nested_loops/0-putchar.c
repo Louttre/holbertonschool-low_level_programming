@@ -6,6 +6,6 @@
  */
 int main(void)
 {
-    _putchar();
+    printf("%d", _putchar());
     return 0;
 }
