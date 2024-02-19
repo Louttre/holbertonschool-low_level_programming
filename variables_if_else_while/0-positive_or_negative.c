@@ -2,6 +2,10 @@
 #include <time.h>
 #include <stdio.h>
 /* more headers goes there */
+/**
+ * main - signe of the number
+ * Return: 0
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
