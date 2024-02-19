@@ -10,9 +10,12 @@ int main(void)
 	while (i < 58)
 	{
 		putchar(i);
-		putchar(44);
-		putchar(32);
-		i++;
+		if (i != 57)
+		{
+			putchar(44);
+			putchar(32);
+		}
+		i++;	
 	}
 	putchar('\n');
 	return (0);
