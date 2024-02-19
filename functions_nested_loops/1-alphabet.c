@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main - alphaprint
+ * print_alphabet - alphaprint
  * Return: 0
  */
-void print_alphabet (void)
+void print_alphabet(void)
 {
 	int a = 97;
 
