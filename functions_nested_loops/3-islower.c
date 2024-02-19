@@ -2,6 +2,7 @@
 /**
  * _islower - what a function
  * Return: 0
+ * @c - is an int
  */
 int _islower(int c)
 {
