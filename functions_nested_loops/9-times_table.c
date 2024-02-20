@@ -6,13 +6,17 @@ void times_table(void)
 
 	while (n < 10)
 	{
-		int i = 0;
+		int i = 1;
+	
+		_putchar('0');
+		_putchar(',');
+		_putchar(' ');
 
 		while (i < 10)
 		{
 			int j = i * n;
 
-			if ((j / 10) != 0 && i > 0)
+			if ((j / 10) != 0)
 				_putchar((j / 10) + '0');
 			else 
 				_putchar(' ');
