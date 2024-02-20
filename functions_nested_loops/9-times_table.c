@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * times_table - table
+ * @n: lignes
+ * @i: colonnes
+ */
 void times_table(void)
 {
 	int n = 0;
@@ -7,7 +11,7 @@ void times_table(void)
 	while (n < 10)
 	{
 		int i = 1;
-	
+
 		_putchar('0');
 		_putchar(',');
 		_putchar(' ');
@@ -18,13 +22,13 @@ void times_table(void)
 
 			if ((j / 10) != 0)
 				_putchar((j / 10) + '0');
-			else 
+			else
 				_putchar(' ');
 
 			_putchar((j % 10) + '0');
-			
+
 			if (i != 9)
-			{	
+			{
 				_putchar(',');
 				_putchar(' ');
 			}
