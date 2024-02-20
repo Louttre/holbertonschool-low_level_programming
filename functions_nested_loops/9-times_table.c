@@ -18,7 +18,6 @@ void times_table(void)
 			}
 			i++;
 		}
-		_putchar('$');
 		_putchar('\n');
 		n++;
 	}
