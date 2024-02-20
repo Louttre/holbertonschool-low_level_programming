@@ -1,14 +1,13 @@
 #include "main.h"
-
-
-
+/**
+ * jack_bauer - compteur
+ */
 void jack_bauer(void)
 {
 	int min = 0;
 	int Dmin = 0;
 	int heure = 0;
 	int Dheure = 0;
-
 
 	while (Dheure <= 2)
 	{
@@ -39,5 +38,5 @@ void jack_bauer(void)
 			heure++;
 		}
 		Dheure++;
-	}	
+	}
 }
