@@ -1,8 +1,6 @@
 #include "main.h"
 /**
  * times_table - table
- * @n: lignes
- * @i: colonnes
  */
 void times_table(void)
 {
