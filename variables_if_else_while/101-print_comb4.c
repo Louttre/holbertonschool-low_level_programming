@@ -31,8 +31,8 @@ int main(void)
 				if (k < 55)
 				{	
 					putchar(',');
-				
-				}	putchar(' ');
+					putchar(' ');
+				}
 				j++;
 			}
 			i++;
