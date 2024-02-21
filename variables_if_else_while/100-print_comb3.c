@@ -2,7 +2,7 @@
 /**
  * main - 00 to 99 w/o rep
  * Return: 0
- */ 
+ */
 int main(void)
 {
 	int i = 48;
