@@ -3,7 +3,6 @@
  * main - 00 to 99 w/o rep
  * Return: 0
  */ 
-
 int main(void)
 {
 	int i = 48;
@@ -15,7 +14,7 @@ int main(void)
 		while (j < 58)
 		{
 			while (j <= i)
-			{	
+			{
 				j++;
 			}
 			putchar(i);
