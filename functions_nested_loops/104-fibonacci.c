@@ -23,12 +23,14 @@ int main(void)
 		{	
 			m = (i + j) / l;
 			n = (i + j) % l;
-			printf("%lu%lu", m, n);
+			if (compteur != 97)
+				printf("%lu%lu, ", m, n);
+			else
+				printf("%lu%lu\n", m, n);		
 		}
-		if (compteur != 97)
+		else
 			printf("%lu, ", i);
 		compteur++;
 	}
-	printf("\n");
 	return (0);
 }
