@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * print_times_table - print tableau
- * n - number of collumn
+ * @n: number of collumn
  */
 void print_times_table(int n)
 {
