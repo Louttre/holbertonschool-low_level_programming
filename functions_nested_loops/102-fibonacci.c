@@ -9,7 +9,8 @@ int main(void)
 
 	unsigned long int j = 2;
 
-	unsigned long int k;	
+	unsigned long int k;
+	
 	int compteur = 0;
 
 	printf("%lu, ", i);
