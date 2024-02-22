@@ -9,7 +9,10 @@ int main(void)
 
 	long int j = 2;
 
-	long int k, m, n;
+	long int k, n;
+
+	float m;
+
 	int compteur = 0;
 	
 	long int l = 100000000000;
@@ -23,10 +26,12 @@ int main(void)
 		{	
 			m = i / l;
 			n = i % l;
+			long int o = (int)m;
+
 			if (compteur != 97)
-				printf("%lu%lu, ", m, n);
+				printf("%lu%lu, ", o, n);
 			else
-				printf("%lu%lu\n", m, n);		
+				printf("%lu%lu\n", o, n);		
 		}
 		else
 			printf("%lu, ", i);
