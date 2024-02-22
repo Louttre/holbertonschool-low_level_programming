@@ -9,21 +9,26 @@ int main(void)
 
 	long int j = 2;
 
-	long int k;
+	long int k, m, n;
 	int compteur = 0;
-
+	
+	long int l = 1000000000;
 	printf("%lu, ", i);
 	while (compteur < 98)
 	{
 		k = j;
 		j += i;
 		i = k;
-		if (compteur == 97)
-			printf("%lu\n", i);
-		else
+		if ((i + j) > l)
+		{	
+			m = (i + j) / l;
+			n = (i + j) % l;
+			printf("%lu%lu", m, n);
+		}
+		if (compteur != 97)
 			printf("%lu, ", i);
 		compteur++;
 	}
-
+	printf("\n");
 	return (0);
 }
