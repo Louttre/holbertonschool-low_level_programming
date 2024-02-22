@@ -11,16 +11,10 @@ void print_times_table(int n)
 	for (i = 0; i <= n; i++)
 	{
 		_putchar('0');
-		if (n == 0)
-		{
-			_putchar('\n');
-			return;
-		}
-		_putchar(',');
-
 		for (j = 1; j <= n; j++)
 		{
-		k = j * i;
+			_putchar(',')
+			k = j * i;
 
 			if (k < 10)
 			{		
@@ -36,8 +30,6 @@ void print_times_table(int n)
 			}
 			if (j == n)
 				_putchar('\n');
-			else
-				_putchar(',');
 		}
 	}
 }
