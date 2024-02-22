@@ -7,11 +7,11 @@ int main(void)
 {
 	int i = 0;
 
-	for(;i < 100; i++)
+	for (; i < 100; i++)
 	{
 		int j = i + 1;
 
-		for (;j < 100; j++)
+		for (; j < 100; j++)
 		{
 			putchar((i / 10) + '0');
 			putchar((i % 10) + '0');
