@@ -18,7 +18,7 @@ int main(void)
 		k = j;
 		j += i;
 		i = k;
-		if (compteur == 96)
+		if (compteur == 98)
 			printf("%lu\n", i);
 		else
 			printf("%lu, ", i);
