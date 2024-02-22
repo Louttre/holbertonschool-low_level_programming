@@ -1,18 +1,15 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * print_times_table - print tableau
  */
 void print_times_table(int n)
 {
-	int i = 0;
+	int i, j, k;
 
 	if ( n < 0 || n > 14)
 		return;
-	for (; i <= n; i++)
+	for (i = 0; i <= n; i++)
 	{
-		int j = 1;
-
 		_putchar('0');
 		if (n == 0)
 		{
@@ -21,9 +18,9 @@ void print_times_table(int n)
 		}
 		_putchar(',');
 
-		for (; j <= n; j++)
+		for (j = 1; j <= n; j++)
 		{
-			int k = j * i;
+		k = j * i;
 
 			if (k < 10)
 			{		
