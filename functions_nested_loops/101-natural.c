@@ -1,6 +1,9 @@
 #include <stdio.h>
-
-int main(void)
+/** 
+ * main - sum multiple of 3 and 5
+ * Return: 0
+ */
+int main (void)
 {
 	int i;
 
