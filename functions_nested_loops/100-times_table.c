@@ -38,12 +38,10 @@ void print_times_table(int n)
 				putchar(((k / 10) % 10) + '0');
 				putchar((k % 10) + '0');
 			}
-			else
-				printf("%d", k);
 			if (j == n)
-				printf("\n");
+				putchar('\n');
 			else
-				printf(",");
+				putchar(',');
 		}
 	}
 }	
