@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - 50 first fibo number
+ * Return: 0
+ */
 int main(void)
 {
 	unsigned long int i = 1;
