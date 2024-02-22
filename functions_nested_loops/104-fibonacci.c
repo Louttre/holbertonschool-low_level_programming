@@ -13,12 +13,12 @@ int main(void)
 	int compteur = 0;
 
 	printf("%lu, ", i);
-	while (compteur < 98)
+	while (compteur < 97)
 	{
 		k = j;
 		j += i;
 		i = k;
-		if (compteur == 98)
+		if (compteur == 96)
 			printf("%lu\n", i);
 		else
 			printf("%lu, ", i);
