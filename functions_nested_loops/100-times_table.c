@@ -5,7 +5,7 @@
 void print_times_table(int n)
 {
 	int i, j, k;
-	
+
 	if (n < 0 || n > 14)
 		return;
 	for (i = 0; i <= n; i++)
@@ -16,7 +16,7 @@ void print_times_table(int n)
 			_putchar(',');
 			k = j * i;
 			if (k < 10)
-			{	
+			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(' ');
