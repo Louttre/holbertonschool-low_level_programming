@@ -5,6 +5,8 @@ void print_times_table(int n)
 {
 	int i = 0;
 	
+	if ( n < 0 || n > 14)
+		return;
 	for (; i < n + 1; i++)
 	{
 		int j = 1;
