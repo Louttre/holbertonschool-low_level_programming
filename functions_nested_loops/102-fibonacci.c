@@ -2,22 +2,25 @@
 
 int main(void)
 {
-	int i = 1;
+	long unsigned int i = 1;
 
-	int j = 2;
+	long unsigned int j = 2;
 
-	int k;
+	long unsigned int k;
 	
-	printf("%d, ", i);
-	while (j < 50)
+	int compteur = 0;
+
+	printf("%lu, ", i);
+	while (compteur < 49)
 	{
 		k = j;
 		j += i;
 		i = k;
-		if (j > 50)
-			printf("%d\n", i);
+		if (compteur == 48)
+			printf("%lu\n", i);
 		else
-			printf("%d, ", i);
+			printf("%lu, ", i);
+		compteur++;
 	}
 	return (0);
 }	
