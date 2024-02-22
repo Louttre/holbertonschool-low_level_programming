@@ -3,7 +3,7 @@
  * main - fibo 4 000 000
  * Return: 0
  */
-int main (void)
+int main(void)
 {
 	unsigned long int i = 1;
 
