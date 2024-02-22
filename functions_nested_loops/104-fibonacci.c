@@ -15,19 +15,22 @@ int main(void)
 
 	int compteur = 0;
 	
+	
 	long int l = 100000000000;
 	printf("%lu, ", i);
 	while (compteur < 98)
 	{
+		long int o;
+
 		k = j;
 		j += i;
 		i = k;
+
 		if (i > l)
 		{	
 			m = i / l;
 			n = i % l;
-			long int o = (int)m;
-
+			o = (int)m;
 			if (compteur != 97)
 				printf("%lu%lu, ", o, n);
 			else
