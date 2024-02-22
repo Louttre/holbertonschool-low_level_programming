@@ -19,9 +19,9 @@ int main(void)
 		j += i;
 		i = k;
 		if (compteur == 97)
-			printf("%lu", i);
+			printf("%lu\n", i);
 		else
-			printf("%lu\n, ", i);
+			printf("%lu, ", i);
 		compteur++;
 	}
 	return (0);
