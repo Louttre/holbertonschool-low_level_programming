@@ -12,7 +12,7 @@ int main(void)
 	long int k, m, n;
 	int compteur = 0;
 	
-	long int l = 1000000000;
+	long int l = 10000000000;
 	printf("%lu, ", i);
 	while (compteur < 98)
 	{
