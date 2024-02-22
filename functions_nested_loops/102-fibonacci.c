@@ -2,11 +2,11 @@
 
 int main(void)
 {
-	long unsigned int i = 1;
+	unsigned long int i = 1;
 
-	long unsigned int j = 2;
+	unsigned long int j = 2;
 
-	long unsigned int k;
+	unsigned long int k;
 	
 	int compteur = 0;
 
