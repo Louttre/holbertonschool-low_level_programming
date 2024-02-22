@@ -18,11 +18,26 @@ void print_times_table(int n)
 			int k = j * i;
 
 			if (k < 10)
-				printf("   %d", k);
+			{			
+				putchar(' ');
+				putchar(' ');
+				putchar(' ');
+				putchar(k + '0');
+			}
 			else if (k < 100 && k > 9)
-				printf("  %d", k);
+			{	
+				putchar(' ');
+				putchar(' ');
+				putchar((k / 10) + '0');
+				putchar((k % 10) + '0');
+			}
 			else if (k < 1000 && k > 99)
-				printf(" %d", k);
+			{
+				putchar(' ');
+				putchar((k / 100) + '0');
+				putchar(((k / 10) % 10) + '0');
+				putchar((k % 10) + '0');
+			}
 			else
 				printf("%d", k);
 			if (j == n)
