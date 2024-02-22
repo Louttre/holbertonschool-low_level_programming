@@ -29,7 +29,7 @@ int main(void)
 		if (i > l)
 		{	
 			m = i / l;
-			n = (float)m;
+			n = i % l;
 			o = (int)m;
 			if (compteur != 97)
 				printf("%lu%lu, ", o, n);
