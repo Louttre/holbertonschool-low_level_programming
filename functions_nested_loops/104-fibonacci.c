@@ -11,7 +11,7 @@ int main(void)
 
 	long int k, n;
 
-	float m;
+	float m, p;
 
 	int compteur = 0;
 	
@@ -31,6 +31,9 @@ int main(void)
 			m = i / l;
 			n = i % l;
 			o = (int)m;
+			p = m * 10;
+			if (((int)p % 10) == 0)
+				printf("%lu%lu, ", o * 10, n);
 			if (compteur != 97)
 				printf("%lu%lu, ", o, n);
 			else
