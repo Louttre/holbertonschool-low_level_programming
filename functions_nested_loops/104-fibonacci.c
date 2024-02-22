@@ -19,10 +19,10 @@ int main(void)
 		k = j;
 		j += i;
 		i = k;
-		if ((i + j) > l)
+		if (i > l)
 		{	
-			m = (i + j) / l;
-			n = (i + j) % l;
+			m = i / l;
+			n = i % l;
 			if (compteur != 97)
 				printf("%lu%lu, ", m, n);
 			else
