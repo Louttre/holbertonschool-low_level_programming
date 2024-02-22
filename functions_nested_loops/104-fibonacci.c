@@ -20,7 +20,7 @@ int main(void)
 	printf("%lu, ", i);
 	while (compteur < 98)
 	{
-		long int o;
+		long int o, q;
 
 		k = j;
 		j += i;
@@ -32,7 +32,8 @@ int main(void)
 			n = i % l;
 			o = (int)m;
 			p = m * 10;
-			if (((int)p % 10) == 0)
+			q = (int)p;
+			if ((q % 10) == 0)
 				printf("%lu%lu, ", o * 10, n);
 			if (compteur != 97)
 				printf("%lu%lu, ", o, n);
@@ -41,6 +42,7 @@ int main(void)
 		}
 		else
 			printf("%lu, ", i);
+		
 		compteur++;
 	}
 	return (0);
