@@ -1,49 +1,31 @@
 #include <stdio.h>
 /**
- * main - 98 first fibo number
- * Return: 0
+ * main - Prints the first 98 Fibonacci numbers
+ * Return: Always 0
  */
 int main(void)
 {
 	long int i = 1;
-
 	long int j = 2;
+	long int k;
 
-	long int k, n;
+	printf("%lu, %lu", i, j);
 
-	float m, p;
-
-	int compteur = 0;
-	
-	
-	long int l = 10000000000;
-	printf("%lu, ", i);
-	while (compteur < 98)
+	for (int compteur = 2; compteur < 98; compteur++)
 	{
-		long int o, q;
+		k = i + j;
+		i = j;
+		j = k;
 
-		k = j;
-		j += i;
-		i = k;
-
-		if (i > l)
-		{	
-			m = i / l;
-			n = i % l;
-			o = (int)m;
-			p = m * 10;
-			q = (int)p;
-			if ((q % 10) == 0)
-				printf("%lu%lu, ", o * 10, n);
-			if (compteur != 97)
-				printf("%lu%lu, ", o, n);
-			else
-				printf("%lu%lu\n", o, n);		
+		if (k >= 10000000000)
+		{
+			printf(", %lu%010lu", k / 10000000000, k % 10000000000);
 		}
-		else
-			printf("%lu, ", i);
-		
-		compteur++;
+		else 
+		{
+			printf(", %lu", k);
+		}
 	}
+	printf("\n");
 	return (0);
 }
