@@ -8,10 +8,11 @@ int main(void)
 	long int i = 1;
 	long int j = 2;
 	long int k;
+	int compteur;
 
 	printf("%lu, %lu", i, j);
 
-	for (int compteur = 2; compteur < 98; compteur++)
+	for (compteur = 2; compteur < 98; compteur++)
 	{
 		k = i + j;
 		i = j;
