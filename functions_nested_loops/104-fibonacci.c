@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%lu, %lu", i, j);
 
-	for (compteur = 2; compteur < 100; compteur++)
+	for (compteur = 0; compteur < 98; compteur++)
 	{
 		k = i + j;
 		i = j;
