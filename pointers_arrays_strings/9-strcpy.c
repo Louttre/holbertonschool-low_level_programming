@@ -16,8 +16,10 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * _puts - print a char
- * @str: array of the string
+ * *_strcpy - print a char
+ * @src: array to copy
+ * @dest: array where to paste
+ * Return: dest
  */
 char *_strcpy(char *dest, char *src)
 {
