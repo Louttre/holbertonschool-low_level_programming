@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_diagonal - print \ n times
- * @n: number of \
+ * print_diagonal - print '\' n times with i spaces
+ * @n: number pre establish
  */
 void print_diagonal(int n)
 {
