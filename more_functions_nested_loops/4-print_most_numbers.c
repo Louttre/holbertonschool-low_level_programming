@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_numbers - print all digits
+ * print_most_numbers - print all digits except 2 and 4
  */
 void print_most_numbers(void)
 {
