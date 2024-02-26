@@ -23,6 +23,7 @@ int _strlen(char *s)
 void puts_half(char *str)
 {
 	int j = _strlen(str) / 2;
+
 	if (_strlen(str) % 2 == 1)
 		 j = (_strlen(str) + 1) / 2;
 	while (str[j] != '\0')
