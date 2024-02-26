@@ -2,8 +2,8 @@
 #include <string.h>
 #include "main.h"
 /**
+ * _strlen - count number of case in array 
  * print_rev - reverse a string
- * _strlen - count number of case in array
  * @s: string
  * Return: i
  */
