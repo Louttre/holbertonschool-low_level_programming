@@ -2,7 +2,7 @@
 #include <string.h>
 #include "main.h"
 /**
- * _strlen - count number of case in array 
+ * _strlen - count number of case in array
  * print_rev - reverse a string
  * @s: string
  * Return: i
