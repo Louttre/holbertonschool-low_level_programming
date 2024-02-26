@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_line - print \ n times
+ * print_diagonal - print \ n times
  * @n: number of \
  */
 void print_diagonal(int n)
