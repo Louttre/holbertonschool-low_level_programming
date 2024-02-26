@@ -23,7 +23,7 @@ int _strlen(char *s)
 void rev_string(char *s)
 {
 	int i;
-	char temp[100];
+	char temp[500];
 	int compteur = 0;
 
 	for (i = _strlen(s) - 1; i >= 0; i--)
