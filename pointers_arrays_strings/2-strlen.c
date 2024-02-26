@@ -3,6 +3,7 @@
 /**
  * _strlen - count number of case in array
  * @s: string to count
+ * Return: i
  */
 int _strlen(char *s)
 {
