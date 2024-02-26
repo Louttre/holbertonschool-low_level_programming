@@ -1,5 +1,8 @@
 #include <stdio.h>
-
+/**
+ * main - fizz buzz (3)(5)
+ * Return: 0
+ */
 int main(void)
 {
 	int i;
