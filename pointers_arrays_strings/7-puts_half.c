@@ -15,7 +15,6 @@ int _strlen(char *s)
 	}
 	return (i);
 }
-
 /**
  * puts_half - print a char
  * @str: array of the string
