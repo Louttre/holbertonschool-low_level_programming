@@ -3,18 +3,15 @@
 
 void more_numbers(void)
 {
-	int i,j,k;
+	int i,j;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (j = 48; j < 58; j++)
+		for (j = 48; j < 62; j++)
 		{
-			_putchar(j);
-		}
-		for (k = 48; k < 53; k++)
-		{
-			_putchar(49);
-			_putchar(k);
+			if (j > 58)
+				_putchar((j / 10) +'0');
+			 _putchar((j % 10) + '0');
 		}
 		_putchar('\n');
 	}
