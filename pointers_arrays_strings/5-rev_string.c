@@ -34,5 +34,5 @@ void rev_string(char *s)
 	for (i = 0; i < _strlen(s); i++)
 	{
 		s[i] = temp[i];
-	}	
-}	
+	}
+}
