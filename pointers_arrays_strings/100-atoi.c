@@ -48,9 +48,7 @@ int _atoi(char *s)
 		}
 	}
 	if (cneg % 2 == 1 && temp == INT_MAX)
-	{
 		return (INT_MIN);
-	}	
 	if (cneg % 2 == 1)
 		temp *= -1;
 	return (temp);
