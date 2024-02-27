@@ -1,7 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+/**
+ * _strlen - count number of case in array
+ * @s: string to count
+ * Return: i
+ */
+int _strlen(char *s)
+{
+	int i = 0;
 
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
+ * _atoi - convert char to int
+ * @s: string to convert
+ * Return: temp
+ */
 int _atoi(char *s)
 {
 	int cpos = 0;
