@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <string.h>
+#include <limits.h>
 /**
  * _strlen - count number of case in array
  * @s: string to count
@@ -23,7 +24,6 @@ int _strlen(char *s)
  */
 int _atoi(char *s)
 {
-	int cpos = 0;
 	int cneg = 0;
 	int i;
 	int temp = 0;
@@ -32,18 +32,25 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 	       		cneg += 1;
- 		else if (s[i] == '+')
-			cpos += 1;
 		if (s[i] <= '9' && s[i] >= '0')	
 		{
 			while (s[i] <= '9' && s[i] >= '0')
-			{	
+			{
+				if (temp == INT_MAX / 10 && (s[i] - 48) > INT_MAX % 10)
+				{
+					temp = INT_MAX;
+					break;
+				}
 				temp = (temp * 10) + (s[i] - 48);
 				i++;
 			}
 			break;
 		}
 	}
+	if (cneg % 2 == 1 && temp == INT_MAX)
+	{
+		return INT_MIN;
+	}	
 	if (cneg % 2 == 1)
 		temp *= -1;
 	return (temp);
