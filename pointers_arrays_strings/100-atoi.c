@@ -30,9 +30,9 @@ int _atoi(char *s)
 
 	for (i = 0; i < _strlen(s); i++)
 	{
-		if (s[i] == '-')
-	       		cneg += 1;
- 		else if (s[i] == '+')
+		if (s[i] == '-' && cpos == 0)
+	       		cneg = 1;
+ 		else if (s[i] == '+' && cneg == 0)
 			cpos += 1;
 		if (s[i] <= '9' && s[i] >= '0')	
 		{
@@ -44,7 +44,7 @@ int _atoi(char *s)
 			break;
 		}
 	}
-	if (cneg > cpos)
+	if (cneg == 1)
 		temp *= -1;
 	return (temp);
 }
