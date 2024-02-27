@@ -31,8 +31,8 @@ int _atoi(char *s)
 	for (i = 0; i < _strlen(s); i++)
 	{
 		if (s[i] == '-')
-	       		cneg += 1;
-		if (s[i] <= '9' && s[i] >= '0')	
+			cneg += 1;
+		if (s[i] <= '9' && s[i] >= '0')
 		{
 			while (s[i] <= '9' && s[i] >= '0')
 			{
@@ -49,7 +49,7 @@ int _atoi(char *s)
 	}
 	if (cneg % 2 == 1 && temp == INT_MAX)
 	{
-		return INT_MIN;
+		return (INT_MIN);
 	}	
 	if (cneg % 2 == 1)
 		temp *= -1;
