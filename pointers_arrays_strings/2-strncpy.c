@@ -16,7 +16,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * _strncat - fuse two array in one
+ * _strncpy - fuse two array in one to a certain byte
  * @dest: destination array
  * @src: source array
  * @n: byte
