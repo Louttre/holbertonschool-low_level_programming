@@ -16,9 +16,10 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * _strcat - fuse two array in one
+ * _strncat - fuse two array in one
  * @dest: destination array
  * @src: source array
+ * @n: byte
  * Return: ptr which contain dest
  */
 char *_strncat(char *dest, char *src, int n)
