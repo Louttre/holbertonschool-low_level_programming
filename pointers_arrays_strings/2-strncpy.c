@@ -31,8 +31,8 @@ char *_strncpy(char *dest, char *src, int n)
 	{
 		if (i > _strlen(src))
 			dest[i] = '\0';
-		else	
-			dest[i] = src[i];	
+		else
+			dest[i] = src[i];
 	}
 	ptr = dest;
 	return (ptr);
