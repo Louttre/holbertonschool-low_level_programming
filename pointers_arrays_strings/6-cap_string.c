@@ -16,7 +16,7 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * string_toupper - convert lower to upper
+ * char_toupper - convert lower to upper
  * @a: string to convert
  * Return: a
  */
