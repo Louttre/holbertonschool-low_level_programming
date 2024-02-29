@@ -34,7 +34,7 @@ char *leet(char *a)
 			if (a[i] == ref[j])
 			{
 				a[i] = ref[j + 1];
-				break;
+				j = 20;
 			}
 		}
 	}
