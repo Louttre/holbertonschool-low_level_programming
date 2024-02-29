@@ -34,7 +34,7 @@ char char_toupper(char a)
 char *cap_string(char *a)
 {
 	int i;
-	char tab[13] = " !(),.;?{}\"	 ";
+	char tab[13] = " !(),.;?{}\"\t\n";
 	
 	for (i = 0; i < _strlen(a); i++)
 	{
