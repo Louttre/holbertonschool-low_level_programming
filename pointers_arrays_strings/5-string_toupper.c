@@ -3,7 +3,7 @@
 /**
  * string_toupper - convert lower to upper
  * @a: string to convert
- * Return: a 
+ * Return: a
  */
 char *string_toupper(char *a)
 {
