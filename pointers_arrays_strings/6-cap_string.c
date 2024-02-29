@@ -21,21 +21,22 @@ int _strlen(char *s)
  * Return: a
  */
 char char_toupper(char a)
-{	
+{
 	if (a > 96 && a < 123)
 		a -= 32;
-	
+
 	return (a);
 }
 /**
  * cap_string - upper first letter of a word
  * @a: array
+ * Return: a
  */
 char *cap_string(char *a)
 {
 	int i;
 	char tab[13] = " !(),.;?{}\"\t\n";
-	
+
 	a[0] = char_toupper(a[0]);
 	for (i = 0; i < _strlen(a); i++)
 	{
@@ -45,7 +46,7 @@ char *cap_string(char *a)
 		{
 			if (a[i] == tab[j] && a[i + 1] != '\0')
 			{
-				a[i + 1] = char_toupper(a[i + 1]);	
+				a[i + 1] = char_toupper(a[i + 1]);
 			}
 		}
 	}
