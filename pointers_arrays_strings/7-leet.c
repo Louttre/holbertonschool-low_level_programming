@@ -7,7 +7,7 @@
  */
 char *leet(char *a)
 {
-	int i;
+	int i = 0;
 	char ref[20] = "A4a4E3e3O0o0T7t7L1l1";
 
 	while (a[i] != '\0')
