@@ -23,19 +23,20 @@ int _strlen(char *s)
 char *leet(char *a)
 {
 	int i;
-		
-	for (; i < _strlen(a); i++)
+	char ref[20] = "A4a4E3e3O0o0T7t7L1l1";
+
+	for (i = 0; i < _strlen(a); i++)
 	{
-		if (a[i] == 'A' || a[i] == 'a')
-			a[i] = '4';
-		else if (a[i] == 'E' || a[i] == 'e')
-                        a[i] = '3';
-		else if (a[i] == 'O' || a[i] == 'o')
-                        a[i] = '0';
-		else if (a[i] == 'T' || a[i] == 't')
-                        a[i] = '7';
-		else if (a[i] == 'L' || a[i] == 'l')
-                        a[i] = '1';
+		int j = 0;
+
+		for (; j < _strlen(ref); j++)
+		{
+			if (a[i] == ref[j])
+			{
+				a[i] = ref[j + 1];
+				break;
+			}
+		}
 	}
 	return (a);
 }
