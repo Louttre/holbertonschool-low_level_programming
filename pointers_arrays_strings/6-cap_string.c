@@ -36,6 +36,7 @@ char *cap_string(char *a)
 	int i;
 	char tab[13] = " !(),.;?{}\"\t\n";
 	
+	a[0] = char_toupper(a[0]);
 	for (i = 0; i < _strlen(a); i++)
 	{
 		int j = 0;
