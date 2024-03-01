@@ -8,7 +8,7 @@
 int isitprime(long int n)
 {
 	long int i = 3;
-	
+
 	if (n % 2 == 0)
 		return (0);
 	for (; i <= sqrt(n); i++)
