@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * _pow - a pow b
@@ -21,7 +20,6 @@ int _pow(int a, int b)
 	}
 	return (temp);
 }
-
 /**
  * print_number - turn int to char
  * @n: number to print
