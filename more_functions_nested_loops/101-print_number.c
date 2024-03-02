@@ -1,9 +1,8 @@
 #include "main.h"
 #include <limits.h>
-
 /**
  * _pow - a pow b
- * @a: int 
+ * @a: int
  * @b: pow
  * Return: apowb
  */
@@ -36,12 +35,12 @@ void print_number(int n)
 	if (n < 0)
 	{
 		_putchar('-');
-                n = -n;
-                j = -j;
-		
+		n = -n;
+		j = -j;
+
 		if (n == INT_MIN)
         	{
-                	test = 2147483647;
+			test = 2147483647;
 			j = test;
         	}
 	}
