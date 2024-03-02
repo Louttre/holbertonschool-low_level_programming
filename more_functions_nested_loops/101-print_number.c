@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <limits.h>
+
 /**
  * _pow - a pow b
  * @a: int 
@@ -27,14 +30,21 @@ int _pow(int a, int b)
 void print_number(int n)
 {
 	int j = n;
+	int test = n;
 	int i = 0;
 	int temp;
-	
+
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
-		j = -j;
+                n = -n;
+                j = -j;
+		
+		if (n == INT_MIN)
+        	{
+                	test = 2147483647;
+			j = test;
+        	}
 	}
 	while (j >= 10)
 	{
@@ -43,7 +53,20 @@ void print_number(int n)
 	}
 	for (; i >= 0; i--)
 	{
-		temp = n / _pow(10, i);
-		_putchar((temp % 10) + '0');
+		if ( n == INT_MIN)
+		{
+			if (i == 0)
+			{
+				_putchar(8 + '0');
+				break;
+			}
+			temp = test / _pow(10, i);
+			_putchar((temp % 10) + '0');
+		}
+		else
+		{
+			temp = n / _pow(10, i);
+			_putchar((temp % 10) + '0');
+		}
 	}
 }
