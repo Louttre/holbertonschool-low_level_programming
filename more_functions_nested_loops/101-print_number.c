@@ -39,10 +39,10 @@ void print_number(int n)
 		j = -j;
 
 		if (n == INT_MIN)
-        	{
+		{
 			test = 2147483647;
 			j = test;
-        	}
+		}
 	}
 	while (j >= 10)
 	{
@@ -51,7 +51,7 @@ void print_number(int n)
 	}
 	for (; i >= 0; i--)
 	{
-		if ( n == INT_MIN)
+		if (n == INT_MIN)
 		{
 			if (i == 0)
 			{
