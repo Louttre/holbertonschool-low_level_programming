@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 		i++;
 	}
 	if (s[i] != c)
-		return NULL;
+		return (NULL);
 	p = &s[i];
 	return (p);
 }
