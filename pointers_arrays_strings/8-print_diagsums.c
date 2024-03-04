@@ -12,6 +12,7 @@ void print_diagsums(int *a, int size)
 	int rez = 0;
 	int index;
 	int rez2 = 0;
+
 	for (; i < size; i++)
 	{
 		index = i * size + i;
