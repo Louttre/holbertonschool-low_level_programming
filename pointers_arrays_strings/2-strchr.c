@@ -16,7 +16,9 @@ char *_strchr(char *s, char c)
 	}
 	if (s[i] != c)
 		return NULL;
-	p = &s[i];
-	
-	return (p);
+	else
+	{
+		p = &s[i];
+		return (p);
+	}
 }
