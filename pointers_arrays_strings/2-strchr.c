@@ -5,7 +5,7 @@
  * @s: array where to locate c
  * @c: character to locate in s
  * Return: pointer p that point character adress
- */ 
+ */
 char *_strchr(char *s, char c)
 {
 	unsigned int i = 0;
