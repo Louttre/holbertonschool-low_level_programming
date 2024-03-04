@@ -17,7 +17,7 @@ void print_diagsums(int *a, int size)
 		index = i * size + i;
 		rez += a[index];
 	}
-	for (i = size; i >= 0; i--)
+	for (i = size; i > 0; i--)
 	{
 		index = i * size - i;
 		rez2 += a[index];
