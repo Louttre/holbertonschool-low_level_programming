@@ -18,6 +18,7 @@ int prime_support(int n, int max, int test)
 /**
  * is_prime_number - return prime_support
  * @n: int to check
+ * @Return: prime_support resultat
  */
 int is_prime_number(int n)
 {
