@@ -3,7 +3,7 @@
  * main - print program name (argv[0])
  * @argc: number of command line
  * @argv: array of argc lenght
- * Return: 0 
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
