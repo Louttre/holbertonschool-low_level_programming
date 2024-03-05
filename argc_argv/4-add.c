@@ -25,14 +25,13 @@ int main(int argc, char *argv[])
 		{
 			if (car[j] < '0' || car[j] > '9')
 			{
-                        	printf("Error\n");
-                       		return (1);
-               		}
+				printf("Error\n");
+				return (1);
+			}
 			j++;
 		}
 		res += atoi(argv[i]);
-	}	
+	}
 	printf("%d\n", res);
 	return (0);
-	
 }
