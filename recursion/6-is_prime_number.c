@@ -16,9 +16,9 @@ int prime_support(int n, int max, int test)
 		return (prime_support(n, n / 2, test + 1));
 }
 /**
- * is_prime_number - return prime_support
- * @n: int to check
- * @Return: 0 or 1
+ * is_prime_number - Determines if a number is prime
+ * @n: The number to check for primality
+ * Return: 1 if @n is prime, 0 otherwise.
  */
 int is_prime_number(int n)
 {
