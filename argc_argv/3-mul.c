@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> 
+#include <stdlib.h>
 /**
  * main - multiply all arg in argv
  * @argc: number of command line
