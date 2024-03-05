@@ -2,6 +2,7 @@
 /**
  * prime_support - check if n is prime
  * @n: int to check primary property
+ * @max: max number to test
  * @test: min to test
  * Return: 0 false - 1 true
  */
