@@ -7,13 +7,10 @@
  */
 int _strlen(char *s)
 {
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	if (*s == 0)
+		return (0);
+	else
+		return (_strlen(s + 1) + 1);
 }
 /**
  * is_palindrome - check if is s a palindrome
