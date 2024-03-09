@@ -1,5 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+/**
+ * main - prints minimum number of coins to make change on money
+ * @argc: change
+ * @argv: pointer
+ * Return: 0 if neg, 1 if too many arg
+ */
 int main(int  argc, char *argv[])
 {
 	int comptsus = 0;
