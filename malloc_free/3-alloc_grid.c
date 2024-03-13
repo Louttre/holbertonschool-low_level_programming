@@ -26,6 +26,7 @@ int **alloc_grid(int width, int height)
 		{
 			newarray[j][i] = 0;
 		}
+		newarray[j][i] = '\0';
 	}
 	return (newarray);
 }
