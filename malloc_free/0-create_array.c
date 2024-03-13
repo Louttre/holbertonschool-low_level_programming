@@ -6,7 +6,7 @@
  * create_array - function that creates an array of chars
  * @size: size of the array
  * @c: char to unitialize the array
- * Return: pointer to the array
+ * Return: pointer to the array or NULL
  */
 char *create_array(unsigned int size, char c)
 {
