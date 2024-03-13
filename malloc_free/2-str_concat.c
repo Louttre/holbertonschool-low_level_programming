@@ -32,7 +32,7 @@ char *str_concat(char *s1, char *s2)
 	newstr = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (newstr == NULL)
 		return (NULL);
-	if (s1 != NULL)
+	if (_strlen(s1) != 0)
 	{
 		while (i < _strlen(s1))
 		{
@@ -40,7 +40,7 @@ char *str_concat(char *s1, char *s2)
 			i++;
 		}
 	}
-	if (s2 != NULL)
+	if (_strlen(s2) != 0)
 	{
 		while (j < _strlen(s2))
 		{
