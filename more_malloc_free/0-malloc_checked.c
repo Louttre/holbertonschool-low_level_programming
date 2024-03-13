@@ -10,13 +10,7 @@ void *malloc_checked(unsigned int b)
 {
 	void *ptr = malloc(b);
 
-<<<<<<< HEAD
 	if (ptr == NULL)
-	{
-=======
-	if (a == NULL)
->>>>>>> refs/remotes/origin/main
 		exit(98);
-	}
 	return (ptr);
 }
