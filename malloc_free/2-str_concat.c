@@ -34,7 +34,6 @@ char *str_concat(char *s1, char *s2)
 			j++;
 		}
 	}
-	else
-		newstr[i] = '\0';
+	newstr[i] = '\0';
 	return (newstr);
 }
