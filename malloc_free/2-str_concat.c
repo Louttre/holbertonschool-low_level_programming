@@ -1,6 +1,20 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
+/**
+ * _strlen - count number of case in array
+ * @s: string to count
+ * Return: i
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /**
  * str_concat - function function that concatenates two strings
  * @s1: first string
@@ -9,18 +23,18 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	size_t i = 0;
-	size_t j = 0;
+	int i = 0;
+	int j = 0;
 	char *newstr;
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	newstr = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	newstr = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (newstr == NULL)
 		return (NULL);
 	if (s1 != NULL)
 	{
-		while (i < strlen(s1))
+		while (i < _strlen(s1))
 		{
 			newstr[i] = s1[i];
 			i++;
@@ -28,7 +42,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
-		while (j < strlen(s2))
+		while (j < _strlen(s2))
 		{
 			newstr[i] = s2[j];
 			i++;
