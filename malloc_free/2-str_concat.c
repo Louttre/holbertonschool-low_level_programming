@@ -1,43 +1,47 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
 /**
- * str_concat - point
- * @s1 :copy this string
- * @s2: with this
- *
- * Return: Always 1 (True) or 0 (False)
+ * _strlen - count number of case in array
+ * @s: string to count
+ * Return: i
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+		i++;
+	return (i);
+}
+/**
+ * str_concat - function function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to the array
  */
 char *str_concat(char *s1, char *s2)
 {
-	char *ret;
-	int len_1 = 0;
-	int len_2 = 0;
-	int index = 0;
+	int i = 0;
+	int j = 0;
+	char *newstr;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-
-	while (s1[len_1])
-		len_1++;
-
-	while (s2[len_2])
-		len_2++;
-
-	ret = malloc(sizeof(char) * (len_1 + len_2) + 1);
-
-	if (ret == NULL)
+	newstr = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
+	if (newstr == NULL)
 		return (NULL);
-
-	for (; index <= (len_1 + len_2); index++)
+	while (i < _strlen(s1))
 	{
-		if (index < len_1)
-			ret[index] = s1[index];
-		else
-			 ret[index] = s2[index - (len_1)];
+		newstr[i] = s1[i];
+		i++;
 	}
-
-	return (ret);
+	while (j <= _strlen(s2))
+	{
+		newstr[i] = s2[j];
+		i++;
+		j++;
+	}
+	return (newstr);
 }
