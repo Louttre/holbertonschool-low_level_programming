@@ -31,11 +31,10 @@ char *_strdup(char *str)
 	newstr = malloc(sizeof(char) * (_strlen(str) + 1));
 	if (newstr == NULL)
 		return (NULL);
-	while (i < _strlen(str))
+	while (i <= _strlen(str))
 	{
 		newstr[i] = str[i];
 		i++;
 	}
-	newstr[i] = '\0';
 	return (newstr);
 }
