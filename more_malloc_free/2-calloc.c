@@ -2,7 +2,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
+/**
+ * _calloc - function that allocates memory for an array
+ * @nmemb: number of arg
+ * @size: size of the array
+ * Return: p
+ */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	char *p;
