@@ -24,7 +24,7 @@ int _strlen(char *s)
 char *_strdup(char *str)
 {
 	char *newstr;
-	size_t i = 0;
+	int i = 0;
 
 	if (str == NULL)
 		return (NULL);
