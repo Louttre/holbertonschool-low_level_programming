@@ -79,9 +79,8 @@ char **strtow(char *str)
 		}
 		p[k][i] = '\0';
 		i = 0;
-		if (k < comptword(str))
+		if (k < comptword(str) - 1)
 			k++;
 	}
-	p[k] = NULL;
 	return (p);
 }
