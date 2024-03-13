@@ -29,7 +29,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	if (s2 != NULL)
 	{
-		while (j <= strlen(s2))
+		while (j < strlen(s2))
 		{
 			newstr[i] = s2[j];
 			i++;
