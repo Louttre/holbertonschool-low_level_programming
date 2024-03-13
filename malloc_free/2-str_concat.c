@@ -12,7 +12,7 @@ char *str_concat(char *s1, char *s2)
 	size_t i = 0;
 	size_t j = 0;
 	char *newstr;
-	
+
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
 	newstr = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
