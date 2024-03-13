@@ -30,8 +30,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0;
 	unsigned int j = 0;
 	char *a;
-	int len2 = _strlen(s2);
-	int len1 = _strlen(s1);
+	unsigned int len2 = _strlen(s2);
+	unsigned int len1 = _strlen(s1);
 	
 	if (s1 == NULL)
 		s1 = "";
