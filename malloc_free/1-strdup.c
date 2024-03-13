@@ -1,7 +1,21 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+/**
+ * _strlen - count number of case in array
+ * @s: string to count
+ * Return: i
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
 /**
  * _strdup - function that returns a pointer to a newly allocated space
  * @str: string to cpy
@@ -14,10 +28,10 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	newstr = malloc(sizeof(char) * (strlen(str) + 1));
+	newstr = malloc(sizeof(char) * (_strlen(str) + 1));
 	if (newstr == NULL)
 		return (NULL);
-	while (i < strlen(str))
+	while (i < _strlen(str))
 	{
 		newstr[i] = str[i];
 		i++;
