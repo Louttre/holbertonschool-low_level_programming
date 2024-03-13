@@ -47,6 +47,8 @@ char **strtow(char *str)
 	char **p;
 	
 	p = malloc(sizeof(char*) * (comptword(str) + 1));
+	if (p == NULL)
+		return (NULL);
 	for (; i < _strlen(str); i++)
 	{
 		comptletter = 0;
@@ -61,7 +63,7 @@ char **strtow(char *str)
                 }
 		i = j;
 		p[k] = malloc(sizeof(char) * (comptletter + 1));
-		if (p == NULL)
+		if (p[k] == NULL)
 		{
 			for (; l < i; l++)
 				{
