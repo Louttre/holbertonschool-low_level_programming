@@ -24,13 +24,9 @@ int comptword(char *str)
 	for (; i < _strlen(str); i++)
         {
                         if (str[j] != ' ' && str[j] != '\0')
-                        {
                                 comptword += 1;
-                        }
                         while (str[j] != ' ' && str[j] != '\0')
-                        {       
-                                j++; 
-                        }
+                                j++;
                         while (str[j] == ' ')
                                 j++;
                         i = j;
@@ -53,9 +49,7 @@ char **strtow(char *str)
 	{
 		comptletter = 0;
 		while (str[j] == ' ')
-                {
                         j++;
-                }
 		while (str[j] != ' ' && str[j] != '\0')
                 {
                         comptletter++;
@@ -66,9 +60,7 @@ char **strtow(char *str)
 		if (p[k] == NULL)
 		{
 			for (; l < comptword; l++)
-				{
 					free(p[l]);
-				}
 				free(p);
 				return (NULL);
 		}
@@ -78,10 +70,7 @@ char **strtow(char *str)
 	while (str[j] != '\0')
 	{		
 		while (str[j] == ' ')
-		{
 			j++;
-		}
-
 		while (str[j] != ' ' && str[j] != '\0')
 		{
 			p[k][i] = str[j];
