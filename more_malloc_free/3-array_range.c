@@ -4,7 +4,7 @@
 
 int *array_range(int min, int max)
 {
-    	int size = max - min + 1;
+    	int size = max - min;
     	int *p = malloc(size * sizeof(int));
 	int i;	
     	
