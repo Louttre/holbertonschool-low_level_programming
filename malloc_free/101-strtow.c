@@ -82,5 +82,6 @@ char **strtow(char *str)
 		if (k < comptword(str))
 			k++;
 	}
+	p[k] == NULL;
 	return (p);
 }
