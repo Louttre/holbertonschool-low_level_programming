@@ -4,7 +4,7 @@
 /**
  * malloc_checked - function that allocates memory
  * @b: unsigned int
- * Retrun: a
+ * Return: a
  */
 void *malloc_checked(unsigned int b)
 {
