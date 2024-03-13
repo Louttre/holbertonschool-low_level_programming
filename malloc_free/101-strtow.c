@@ -59,7 +59,7 @@ char **strtow(char *str)
 		p[k] = malloc(sizeof(char) * (comptletter + 1));
 		if (p[k] == NULL)
 		{
-			for (; l < comptword; l++)
+			for (; l < comptword(str); l++)
 					free(p[l]);
 				free(p);
 				return (NULL);
@@ -82,6 +82,5 @@ char **strtow(char *str)
 		if (k < comptword(str))
 			k++;
 	}
-	p[k] = NULL;
 	return (p);
 }
