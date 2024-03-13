@@ -11,6 +11,7 @@ int **alloc_grid(int width, int height)
 {
 	int **newarray;
 	int j = 0;
+	
 	newarray = malloc(sizeof(int *) * height);
 	if (newarray == NULL)
 		return (NULL);
@@ -19,7 +20,7 @@ int **alloc_grid(int width, int height)
 	for (; j < height; j++)
 	{
 		int i = 0;
-		
+
 		newarray[j] = (int *)malloc (sizeof(int) * width);
 		for (; i < width; i++)
 		{
