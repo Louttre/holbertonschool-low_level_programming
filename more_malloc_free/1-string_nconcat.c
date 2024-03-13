@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 /**
  * _strlen - count number of case in array
  * @s: string to count
@@ -30,25 +31,24 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i = 0;
 	unsigned int j = 0;
 	char *a;
+	unsigned int len2 = _strlen(s2);
+	unsigned int len1 = _strlen(s1);
 
-	a = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
-	if (a == NULL)
-		return (NULL);
+	if (n > INT_MAX)
+                return (NULL);
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	for (; i < _strlen(s1); i++)
-	{
+	if (n > len2)
+		n = len2;
+	a = malloc(sizeof(char) * (len1 + n + 1));
+	if (a == NULL)
+		return (NULL);
+	for (; i < len1; i++)
 		a[i] = s1[i];
-	}
-	if (n >= _strlen(s2))
-		n = _strlen(s2);
-	for (; j < n; j++)
-	{
+	for (; j < n; j++, i++)
 		a[i] = s2[j];
-		i++;
-	}
 	a[i] = '\0';
 	return (a);
 }
