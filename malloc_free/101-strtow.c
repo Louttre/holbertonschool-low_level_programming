@@ -15,10 +15,10 @@ int _strlen(char *s)
 	}
 	return (i);
 }
-unsigned int comptword(char *str)
+int comptword(char *str)
 {
-	size_t i = 0;
-        unsigned int j = 0;
+	int i = 0;
+        int j = 0;
 	int comptword = 0;
 
 	for (; i < _strlen(str); i++)
@@ -39,9 +39,9 @@ unsigned int comptword(char *str)
 }
 char **strtow(char *str)
 {
-	size_t i = 0;
-	unsigned int j = 0;
-	unsigned int k = 0;
+	int i = 0;
+	int j = 0;
+	int k = 0;
 	int l = 0;
 	int comptletter = 0;
 	char **p;
