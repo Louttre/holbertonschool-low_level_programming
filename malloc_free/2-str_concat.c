@@ -35,12 +35,11 @@ char *str_concat(char *s1, char *s2)
 		newstr[i] = s1[i];
 		i++;
 	}
-	while (j < _strlen(s2))
+	while (j <= _strlen(s2))
 	{
 		newstr[i] = s2[j];
 		i++;
 		j++;
 	}
-	newstr[i] = '\0';
 	return (newstr);
 }
