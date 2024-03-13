@@ -10,9 +10,7 @@ int _strlen(char *s)
 	int i = 0;
 
 	while (s[i] != '\0')
-	{
 		i++;
-	}
 	return (i);
 }
 /**
@@ -33,17 +31,15 @@ char *str_concat(char *s1, char *s2)
 	if (newstr == NULL)
 		return (NULL);
 	while (i < _strlen(s1))
-		{
-			newstr[i] = s1[i];
-			i++;
-		}
+	{
+		newstr[i] = s1[i];
+		i++;
 	}
 	while (j < _strlen(s2))
-		{
-			newstr[i] = s2[j];
-			i++;
-			j++;
-		}
+	{
+		newstr[i] = s2[j];
+		i++;
+		j++;
 	}
 	newstr[i] = '\0';
 	return (newstr);
