@@ -7,6 +7,7 @@
  * @width: widht of the array
  * @height: height of the array
  * Return: pointer of the 2d array
+ */
 int **alloc_grid(int width, int height)
 {
 	int **newarray;
