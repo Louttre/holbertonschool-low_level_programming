@@ -32,17 +32,13 @@ char *str_concat(char *s1, char *s2)
 	newstr = malloc(sizeof(char) * (_strlen(s1) + _strlen(s2) + 1));
 	if (newstr == NULL)
 		return (NULL);
-	if (_strlen(s1) != 0)
-	{
-		while (i < _strlen(s1))
+	while (i < _strlen(s1))
 		{
 			newstr[i] = s1[i];
 			i++;
 		}
 	}
-	if (_strlen(s2) != 0)
-	{
-		while (j < _strlen(s2))
+	while (j < _strlen(s2))
 		{
 			newstr[i] = s2[j];
 			i++;
