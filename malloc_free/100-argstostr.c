@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int lenofav (char **str)
+int lenofav(char **str)
 {
 	int i = 0;
 	int j = 0;
@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	int j = 0;
 	int k = 0;
 	char *p;
-	
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
 	p = malloc(sizeof(char) * (lenofav(av) + ac + 1));
