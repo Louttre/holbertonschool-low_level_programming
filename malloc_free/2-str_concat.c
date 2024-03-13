@@ -15,6 +15,8 @@ char *str_concat(char *s1, char *s2)
 	char *newstr;
 	
 	newstr = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
+	if (newstr == NULL)
+		return (NULL);
 	if (s1 != NULL)
 	{
 		while (i < strlen(s1))
