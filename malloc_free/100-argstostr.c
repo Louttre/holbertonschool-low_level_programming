@@ -1,7 +1,11 @@
 #include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * lenofav - calculate the len of av
+ * @str: double array
+ * Return: lenght of av
+ */
 int lenofav(char **str)
 {
 	int i = 0;
@@ -20,6 +24,12 @@ int lenofav(char **str)
 	}
 	return (compt);
 }
+/**
+ * argtostr - function that concatenates all the arguments
+ * @ac: number of arg
+ * @av: array that contain the argument
+ * Return: pointer to the string
+ */
 char *argstostr(int ac, char **av)
 {
 	unsigned int i = 0;
