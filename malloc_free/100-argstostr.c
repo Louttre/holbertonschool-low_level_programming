@@ -25,7 +25,7 @@ int lenofav(char **str)
 	return (compt);
 }
 /**
- * argtostr - function that concatenates all the arguments
+ * argstostr - function that concatenates all the arguments
  * @ac: number of arg
  * @av: array that contain the argument
  * Return: pointer to the string
