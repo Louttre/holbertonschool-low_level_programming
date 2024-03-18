@@ -4,7 +4,7 @@
  * int_index - function that searches for an integer
  * @array: array of int to check
  * @size: size of the array
- * @cmp: function  
+ * @cmp: function 
  * Return: -1 if false, index of the array if true
  */
 int int_index(int *array, int size, int (*cmp)(int))
