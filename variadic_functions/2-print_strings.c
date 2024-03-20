@@ -18,8 +18,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	for (i = 0; i < n; i++)
 	{
 		j = va_arg(args, char*);
-		if (i + 1 == n)
+		if (i + 1 == n && j != NULL)
 			printf("%s", j);
+		else if (i + 1 == n && j == NULL)
+		{
+			printf("(nil)");
+			break;
+		}
 		else if (j == NULL)
 			printf("(nil)%s", separator);
 		else
