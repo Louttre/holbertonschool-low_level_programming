@@ -1,13 +1,17 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
+/**
+ * print_strings - function that prints strings
+ * @separator: separator between args
+ * @n: number of arguments
+ */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
-	char* j;
+	char *j;
 	va_list args;
-	
+
 	if (separator == NULL)
 		separator = "";
 	va_start(args, n);
