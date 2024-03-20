@@ -35,7 +35,7 @@ void String(va_list args)
 	char *string = va_arg(args, char *);
 
 	if (string == NULL)
-		printf("(nil)");
+		string = "(nil)";
 	printf("%s", string);
 }
 /**
@@ -64,12 +64,6 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == *array[i].flag)
 			{
-				if (format[j + 1] == '\0')
-				{
-					array[i].f(args);
-					putchar('\n');
-					break;
-				}
 				printf("%s", separator);
 				array[i].f(args);
 				separator = ", ";
@@ -78,5 +72,6 @@ void print_all(const char * const format, ...)
 		}
 		j++;
 	}
+	putchar('\n');
 	va_end(args);
 }
