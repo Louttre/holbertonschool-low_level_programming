@@ -54,7 +54,8 @@ void print_all(const char * const format, ...)
 		{"s", String},
 		{NULL, NULL}
 	};
-
+	char *separator = "";
+	
 	va_start(args, format);
 	while (format[j] != '\0')
 	{
@@ -69,9 +70,9 @@ void print_all(const char * const format, ...)
 					putchar('\n');
 					break;
 				}
+				printf("%s", separator);
 				array[i].f(args);
-				putchar(',');
-				putchar(' ');
+				separator = ", ";
 			}
 			i++;
 		}
