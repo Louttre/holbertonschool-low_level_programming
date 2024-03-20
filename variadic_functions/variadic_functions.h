@@ -2,11 +2,10 @@
 #define VARIADIC_H
 #include <stdarg.h>
 /**
- * struct argType - Struct argType
- * @at: type of argument
+ * struct PrintType - struct
+ * @flag: type of argument
  * @f: the function associated
  */
-
 struct PrintType
 {
 	char *flag;
