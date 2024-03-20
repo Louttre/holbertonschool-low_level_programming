@@ -21,9 +21,9 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		if (i + 1 == n)
 			printf("%s\n", j);
 		else if (j == NULL)
-			printf("(nil)%s ", separator);
+			printf("(nil)%s", separator);
 		else
-			printf("%s%s ", j, separator);
+			printf("%s%s", j, separator);
 	}
 	va_end(args);
 }
