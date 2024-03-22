@@ -3,43 +3,43 @@
 #include "variadic_functions.h"
 #include <string.h>
 /**
- * Char - print a char
+ * _char - print a char
  * @args: current arg
  */
 void _char(va_list args)
 {
-    printf("%c", va_arg(args, int));
+	printf("%c", va_arg(args, int));
 }
 
 /**
- * Int - print a char
+ * _int - print a char
  * @args: current arg
  */
 void _int(va_list args)
 {
-    printf("%d", va_arg(args, int));
+	printf("%d", va_arg(args, int));
 }
 
 /**
- * Float - print a char
+ * _float - print a char
  * @args: current arg
  */
 void _float(va_list args)
 {
-    printf("%f", va_arg(args, double));
+	printf("%f", va_arg(args, double));
 }
 
 /**
- * String - print a char
+ * _string - print a char
  * @args: current arg
  */
 void _string(va_list args)
 {
-    char *string = va_arg(args, char *);
+	char *string = va_arg(args, char *);
 
-    if (string == NULL)
-        string = "(nil)";
-    printf("%s", string);
+	if (string == NULL)
+		string = "(nil)";
+	printf("%s", string);
 }
 
 /**
@@ -48,34 +48,34 @@ void _string(va_list args)
  */
 void print_all(const char * const format, ...)
 {
-    int i;
-    int j = 0;
-    va_list args;
-    PT array[] = {
-        {"c", _char},
-        {"i", _int},
-        {"f", _float},
-        {"s", _string},
-        {NULL, NULL}
-    };
-    char *separator;
+	int i;
+	int j = 0;
+	va_list args;
+	PT array[] = {
+		{"c", _char},
+		{"i", _int},
+		{"f", _float},
+		{"s", _string},
+		{NULL, NULL}
+	};
+	char *separator;
 
-    va_start(args, format);
-    while (format != NULL && format[j])
-    {
-        i = 0;
-        while (array[i].flag != NULL)
-        {
-            if (format[j] == *array[i].flag)
-            {
-                separator && printf("%s", separator);
-                array[i].f(args);
-                separator = ", ";
-            }
-            i++;
-        }
-        j++;
-    }
-    printf("\n");
-    va_end(args);
+	va_start(args, format);
+	while (format != NULL && format[j])
+	{
+		i = 0;
+		while (array[i].flag != NULL)
+		{
+			if (format[j] == *array[i].flag)
+			{
+				separator && printf("%s", separator);
+				array[i].f(args);
+				separator = ", ";
+			}
+			i++;
+		}
+		j++;
+	}
+	printf("\n");
+	va_end(args);
 }
