@@ -58,7 +58,7 @@ void print_all(const char * const format, ...)
 		{"s", _string},
 		{NULL, NULL}
 	};
-	char *separator;
+	char *separator = NULL;
 
 	va_start(args, format);
 	while (format != NULL && format[j])
@@ -68,7 +68,7 @@ void print_all(const char * const format, ...)
 		{
 			if (format[j] == *array[i].flag)
 			{
-				separator && printf("%s", separator);
+				(void)(separator != NULL && printf("%s", separator));
 				array[i].f(args);
 				separator = ", ";
 			}
