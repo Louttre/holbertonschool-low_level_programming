@@ -5,7 +5,7 @@
 #include <stdlib.h>
 /**
  * add_node - function that adds a new node at the beginning of a list
- * @h: pointer to the head of the list
+ * @head: pointer to the head of the list
  * @str: string to duplicate
  * Return: pointer to the head of the list
  */
