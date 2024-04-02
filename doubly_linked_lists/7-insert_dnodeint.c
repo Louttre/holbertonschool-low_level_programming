@@ -31,17 +31,16 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (add_dnodeint_end(h, n));
 	temp = *h;
 	count = 0;
-	while (temp && count < idx)
+	while (temp && count < idx - 1)
 	{
 		temp = temp->next;
 		count++;
-		printf("count : %d\n", count);
 	}
-	if (count < idx || !temp)
+	if (count < idx - 1 || !temp)
 		return (NULL);
-	new->prev = temp->prev;
+	new->prev = temp;
 	new->n = n;
-	new->next = temp;
+	new->next = temp->next;
 	temp->prev = new;
 	return (new);
 }
