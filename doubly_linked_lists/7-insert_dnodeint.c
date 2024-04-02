@@ -35,7 +35,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		temp = temp->next;
 		count++;
-		printf("%d\n", count);
+		printf("count : %d\n", count);
 	}
 	if (count < idx || !temp)
 		return (NULL);
