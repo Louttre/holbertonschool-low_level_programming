@@ -4,6 +4,21 @@
 #include <string.h>
 #include <stdlib.h>
 /**
+ * _strlen - count number of case in array
+ * @s: string to count
+ * Return: i
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+/**
  * add_node_end - function that adds a new node at the end of a list
  * @head: pointer to the head of the list
  * @str: string to duplicate
@@ -24,7 +39,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 	}
 	last = *head;
-	new->len = strlen(str);
+	new->len = _strlen(str);
 	new->next = NULL;
 	if (*head == NULL)
 	{
