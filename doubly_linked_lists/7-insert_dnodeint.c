@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include "lists.h"
 /**
- * insert_dnodeint_at_index - function that returns the sum of all the data (n) of a list
+ * insert_dnodeint_at_index - returns the sum of all the data of a list
  * @h: pointer to the pointer of the head of the list
  * @idx: index where it insert the new node
- * @n: data to store in the node 
+ * @n: data to store in the node
  * Return: pointer to the new node
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
