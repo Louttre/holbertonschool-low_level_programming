@@ -3,6 +3,12 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
+/**
+ * add_node - function that adds a new node at the beginning of a list
+ * @h: pointer to the head of the list
+ * @str: string to duplicate
+ * Return: pointer to the head of the list
+ */
 list_t *add_node(list_t **head, const char *str)
 {
 	list_t *new;
