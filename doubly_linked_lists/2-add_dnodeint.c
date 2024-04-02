@@ -4,8 +4,8 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * add_node_end - function that adds a new node at the start of a list
- * @h: pointer to the head of the list
+ * aadd_dnodeint - function that adds a new node at the start of a list
+ * @head: pointer to the head of the list
  * @n: int
  * Return: pointer to the head of the list
  */
