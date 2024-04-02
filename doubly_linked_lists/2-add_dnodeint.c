@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * aadd_dnodeint - function that adds a new node at the start of a list
+ * add_dnodeint - function that adds a new node at the start of a list
  * @head: pointer to the head of the list
  * @n: int
  * Return: pointer to the head of the list
