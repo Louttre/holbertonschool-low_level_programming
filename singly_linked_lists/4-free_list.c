@@ -3,7 +3,10 @@
 #include <stddef.h>
 #include <string.h>
 #include <stdlib.h>
-
+/**
+ * free_list - function that frees a list
+ * @head: pointer to the head of the list
+ */
 void free_list(list_t *head)
 {
 	list_t *temp;
