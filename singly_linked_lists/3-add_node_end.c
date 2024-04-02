@@ -4,7 +4,7 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * aadd_node_end - function that adds a new node at the end of a list
+ * add_node_end - function that adds a new node at the end of a list
  * @h: pointer to the head of the list
  * @str: string to duplicate
  * Return: pointer to the tail of the list
