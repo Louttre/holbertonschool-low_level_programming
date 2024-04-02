@@ -8,7 +8,7 @@
  * @s: string to count
  * Return: i
  */
-unsigned int _strlen(char *s)
+unsigned int _strlen(const char *s)
 {
 	unsigned int i = 0;
 
