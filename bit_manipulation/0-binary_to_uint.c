@@ -48,7 +48,7 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (0);
-	if (_strlen(b) > 16)
+	if (_strlen(b) > 32)
 		return (0);
 	temp = b;
 	while (*temp != '\0')
