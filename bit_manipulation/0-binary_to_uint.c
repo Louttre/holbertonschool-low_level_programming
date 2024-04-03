@@ -36,7 +36,7 @@ int _pow(int a, int b)
 }
 /**
  * binary_to_uint - function that converts a binary number to an unsigned int
- * @b: string 
+ * @b: string
  * Return: int
  */
 unsigned int binary_to_uint(const char *b)
