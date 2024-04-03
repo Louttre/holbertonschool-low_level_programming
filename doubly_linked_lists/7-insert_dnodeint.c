@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
+#include <stddef.h>
 #include "lists.h"
 /**
  * insert_dnodeint_at_index - returns the sum of all the data of a list
