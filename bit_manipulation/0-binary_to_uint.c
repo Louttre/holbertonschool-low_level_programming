@@ -55,7 +55,7 @@ unsigned int binary_to_uint(const char *b)
 			return (0);
 		temp++;
 	}
-	while (lenb > 0)
+	while (lenb >= 0)
 	{
 		i += (_pow(2, lenb) * (b[j] - '0'));
 		lenb--;
