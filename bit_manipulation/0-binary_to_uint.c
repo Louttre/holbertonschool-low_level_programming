@@ -43,11 +43,12 @@ unsigned int binary_to_uint(const char *b)
 {
 	unsigned long int i = 0;
 	const char *temp;
-	int lenb = _strlen(b) - 1;
+	int lenb;
 	int j = 0;
 
-	if (*b == '\0')
+	if (!b)
 		return (0);
+	lenb = _strlen(b) - 1;
 	temp = b;
 	while (*temp != '\0')
 	{
