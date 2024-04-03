@@ -2,6 +2,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stddef.h>
 /**
  * delete_dnodeint_at_index - function that deletes the node at index of a list
  * @head: pointer to the head of the list
@@ -33,6 +34,11 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (-1);
 	temp2 = temp->prev;
 	temp1 = temp->next;
+	if (!temp1)
+	{
+		temp2->next = NULL;
+		free(temp);
+	}
 	temp2->next = temp1;
 	temp1->prev = temp2;
 	free(temp);
