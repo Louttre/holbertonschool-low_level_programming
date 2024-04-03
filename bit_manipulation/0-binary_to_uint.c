@@ -48,6 +48,8 @@ unsigned int binary_to_uint(const char *b)
 
 	if (!b)
 		return (0);
+	if (_strlen(b) > sizeof(unsigned int) * 8)
+		return (0);
 	temp = b;
 	while (*temp != '\0')
 	{
