@@ -41,7 +41,7 @@ int _pow(int a, int b)
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int i = 0;
+	unsigned long int i = 0;
 	const char *temp;
 	int lenb = _strlen(b) - 1;
 	int j = 0;
