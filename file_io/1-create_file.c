@@ -29,23 +29,18 @@ int create_file(const char *filename, char *text_content)
 {
 
 	int fd, n;
-	char *s;
 
 	if (!filename)
 		return (-1);
 	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
-	s = malloc(sizeof(char) * ((_strlen(text_content) + 1)));
-	if (!s || !fd)
+	if (!fd)
 		return (-1);
-	strcpy(s, text_content);
-	n = write(fd, s, _strlen(text_content));
+	n = write(fd, text_content, _strlen(text_content));
 	if (!n || n != _strlen(text_content))
 	{
-		free(s);
 		close(fd);
 		return (-1);
 	}
-	free(s);
 	close(fd);
 	return (1);
 }
