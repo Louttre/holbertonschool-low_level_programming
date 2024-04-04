@@ -9,9 +9,9 @@
  */
 void close_file(int fd)
 {
-	int i;
+	int i = close(fd);
 	
-	if ((i = close(fd)) < 0)
+	if (i < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
 		exit(100);
