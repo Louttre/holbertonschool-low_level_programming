@@ -41,9 +41,14 @@ void _cp(const char *source, const char *target)
 			exit(99);
 		}
 	}
-	if (close(fd_source) < 0 || close(fd_target) < 0)
+	if (close(fd_source) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
+		exit(100);
+	}
+	else if (close(fd_target) < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
 		exit(100);
 	}
 }
