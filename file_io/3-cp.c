@@ -10,9 +10,9 @@
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target;
-	int check_read = 1;
+	int check_write, fd_source, fd_target, check_read = 1;
 	char *s[1024];
+	char *Er = "Error: Can't close file descriptor for ";
 
 	fd_source = open(source, O_RDONLY);
 	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, 0664);
@@ -41,14 +41,9 @@ void _cp(const char *source, const char *target)
 			exit(99);
 		}
 	}
-	if (close(fd_source) < 0)
+	if (close(fd_source) < 0 || close(fd_target) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
-		exit(100);
-	}
-	else if (close(fd_target) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
+		dprintf(STDERR_FILENO, "%s%s\n", Er, close(fd_source) < 0 ? source : target);
 		exit(100);
 	}
 }
