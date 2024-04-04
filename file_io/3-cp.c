@@ -44,10 +44,10 @@ void _cp(const char *source, const char *target)
 		check_write = write(fd_target, s, check_read);
 		if (check_write < check_read)
 		{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
-		close_file(fd_source);
-		close_file(fd_target);
-		exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
+			close_file(fd_source);
+			close_file(fd_target);
+			exit(99);
 		}
 		if (check_write < 0)
 		{
