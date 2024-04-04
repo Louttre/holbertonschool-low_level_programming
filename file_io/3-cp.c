@@ -39,7 +39,7 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
 	}
-	
+
 	while (check_read)
 	{
 		check_read = read(fd_source, s, 1024);
