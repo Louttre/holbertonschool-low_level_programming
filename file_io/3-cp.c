@@ -6,13 +6,12 @@
 /**
  * close_file - return an error if closing the file causing one
  * @fd: int
- * @s: name of the file
  */
-void close_file(int fd, const char *s)
+void close_file(int fd)
 {
 	if (fd < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", s);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 }
@@ -53,8 +52,8 @@ void _cp(const char *source, const char *target)
 			exit(99);
 		}
 	}
-	close_file((i = close(fd_source)), source);
-	close_file((i = close(fd_target)), target);
+	close_file((i = close(fd_source));
+	close_file((i = close(fd_target));
 }
 /**
  * main - copies the content of a file to another file
