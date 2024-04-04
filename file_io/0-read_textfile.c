@@ -20,7 +20,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	fd = open(filename, O_RDONLY);
 	if (!fd)
+	{
+		free(s);
 		return (0);
+	}
 	n = read(fd, s, letters);
 	if (!n || !s || *s == 0)
 	{
