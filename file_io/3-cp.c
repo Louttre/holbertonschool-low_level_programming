@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <sys/stat.h>
 /**
  * close_file - return an error if closing the file causing one
  * @fd: int
