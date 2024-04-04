@@ -20,7 +20,7 @@ int _strlen(const char *s)
 	return (i);
 }
 /**
- * create_file - function that creates a file
+ * append_text_to_file - function that append text to file
  * @filename: string that contain the name of the file to create
  * @text_content: text to insert in the created file
  * Return: 1 if it works -1 if it not
