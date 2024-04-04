@@ -24,7 +24,7 @@ void close_file(int fd)
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target, check_read;
+	int check_write, fd_source, fd_target, check_read = 1;
 	char *s[1024];
 
 	fd_source = open(source, O_RDONLY);
@@ -39,9 +39,10 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
 	}
-	check_read = read(fd_source, s, 1024);
+	
 	while (check_read)
 	{
+		check_read = read(fd_source, s, 1024);
 		if (check_read < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
