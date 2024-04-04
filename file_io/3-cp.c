@@ -28,12 +28,12 @@ void _cp(const char *source, const char *target)
 
 	fd_source = open(source, O_RDONLY);
 	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, 0664);
-	if (!fd_source)
+	if (!fd_source || !*source)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
 		exit(98);
 	}
-	else if (!fd_target)
+	else if (!fd_target || !*target)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
