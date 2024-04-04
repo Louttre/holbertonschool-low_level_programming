@@ -4,13 +4,26 @@
 #include <fcntl.h>
 #include <unistd.h>
 /**
+ * close_file - return an error if closing the file causing one
+ * @fd: int
+ * @s: name of the file
+ */
+void close_file(int fd, const char *s)
+{
+	if (fd < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", s);
+		exit(100);
+	}
+}
+/**
  * _cp - program that copies the content of a file to another file
  * @source: name of the source file
  * @target: name of the target file
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target, check_read = 1;
+	int check_write, fd_source, fd_target, i, check_read = 1;
 	char *s[1024];
 
 	fd_source = open(source, O_RDONLY);
@@ -25,25 +38,23 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
 	}
-	while ((check_read = read(fd_source, s, 1024)) > 0)
+	while (check_read)
 	{
+		check_read = read(fd_source, s, 1024);
+		if (check_read < 0)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
+			exit(98);
+		}
 		check_write = write(fd_target, s, check_read);
-		if (check_write != check_read)
+		if (check_write < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 			exit(99);
 		}
 	}
-	if (close(fd_source) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
-		exit(100);
-	}
-	else if (close(fd_target) < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", source);
-		exit(100);
-	}
+	close_file((i = close(fd_source)), source);
+	close_file((i = close(fd_target)), target);
 }
 /**
  * main - copies the content of a file to another file
