@@ -42,21 +42,16 @@ void _cp(const char *source, const char *target)
 	{
 		check_read = read(fd_source, s, 1024);
 		check_write = write(fd_target, s, check_read);
-		if (check_write < check_read)
+		if (check_read < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
-			exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
+			exit(98);
 		}
 		if (check_write < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 			exit(99);
 		}
-	}
-	if (check_read < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
-		exit(98);
 	}
 	close_file(fd_source);
 	close_file(fd_target);
