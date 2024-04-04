@@ -48,7 +48,7 @@ void _cp(const char *source, const char *target)
 			exit(98);
 		}
 		check_write = write(fd_target, s, check_read);
-		if (check_write < 0)
+		if (check_write < 0 || check_write != check_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 			exit(99);
