@@ -13,7 +13,7 @@ void close_file(int fd)
 
 	if (i < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE");
+		dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE\n");
 		exit(100);
 	}
 }
