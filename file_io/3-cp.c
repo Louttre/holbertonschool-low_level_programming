@@ -52,8 +52,8 @@ void _cp(const char *source, const char *target)
 			exit(99);
 		}
 	}
-	close_file((i = close(fd_source));
-	close_file((i = close(fd_target));
+	close_file((i = close(fd_source)));
+	close_file((i = close(fd_target)));
 }
 /**
  * main - copies the content of a file to another file
