@@ -24,7 +24,7 @@ void close_file(int fd)
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target, check_read = 1;
+	int check_write, fd_source, fd_target, check_read;
 	char *s[1024];
 
 	fd_source = open(source, O_RDONLY);
