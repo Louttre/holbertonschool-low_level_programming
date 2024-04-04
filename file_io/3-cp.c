@@ -9,9 +9,11 @@
  */
 void close_file(int fd)
 {
-	if (close(fd) < 0)
+	int i;
+	
+	if ((i = close(fd)) < 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
 		exit(100);
 	}
 }
