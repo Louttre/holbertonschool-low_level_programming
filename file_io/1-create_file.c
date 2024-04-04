@@ -33,7 +33,7 @@ int create_file(const char *filename, char *text_content)
 
 	if (!filename)
 		return (-1);
-	fd = open(filename, O_CREAT | O_WRONLY, 0600);
+	fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 	s = malloc(sizeof(char) * ((_strlen(text_content) + 1)));
 	if (!s || !fd)
 		return (-1);
