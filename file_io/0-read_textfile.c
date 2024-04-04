@@ -31,14 +31,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(fd);
 		return (0);
 	}
-	m = write(0, s, n);
+	m = write(1, s, n);
 	if (!m || m != n)
 	{
 		free(s);
 		close(fd);
 		return (0);
 	}
-	close(fd);
 	free(s);
+	close(fd);
 	return (m);
 }
