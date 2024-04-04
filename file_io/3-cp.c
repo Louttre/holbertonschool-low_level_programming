@@ -25,7 +25,7 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
 	}
-	while (check_read = read(fd_source, s, 1024) < 0)
+	while ((check_read = read(fd_source, s, 1024)) > 0)
 	{
 		check_write = write(fd_target, s, check_read);
 		if (check_write != check_read)
