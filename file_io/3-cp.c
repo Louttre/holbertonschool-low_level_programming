@@ -26,12 +26,12 @@ void _cp(const char *source, const char *target)
 	char s[1024];
 
 	fd_source = open(source, O_RDONLY);
-	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	if (fd_source < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
 		exit(98);
 	}
+	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	else if (fd_target < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
@@ -41,12 +41,12 @@ void _cp(const char *source, const char *target)
 	while (check_read)
 	{
 		check_read = read(fd_source, s, 1024);
-		check_write = write(fd_target, s, check_read);
 		if (check_read < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
 			exit(98);
 		}
+		check_write = write(fd_target, s, check_read);
 		if (check_write < 0)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
