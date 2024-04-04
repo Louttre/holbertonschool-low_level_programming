@@ -9,7 +9,7 @@
  */
 void close_file(int fd)
 {
-	if (fd < 0)
+	if (close(fd))
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -22,7 +22,7 @@ void close_file(int fd)
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target, i, check_read = 1;
+	int check_write, fd_source, fd_target, check_read = 1;
 	char *s[1024];
 
 	fd_source = open(source, O_RDONLY);
@@ -52,8 +52,8 @@ void _cp(const char *source, const char *target)
 			exit(99);
 		}
 	}
-	close_file((i = close(fd_source)));
-	close_file((i = close(fd_target)));
+	close_file(fd_source);
+	close_file(fd_target);
 }
 /**
  * main - copies the content of a file to another file
