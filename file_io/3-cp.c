@@ -10,8 +10,7 @@
  */
 void _cp(const char *source, const char *target)
 {
-	int check_write, fd_source, fd_target;
-	int check_read = 1;
+	int check_write, fd_source, fd_target, check_read = 1;
 	char *s[1024];
 
 	fd_source = open(source, O_RDONLY);
@@ -26,16 +25,10 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 		exit(99);
 	}
-	while (check_read)
+	while (check_read = read(fd_source, s, 1024) < 0)
 	{
-		check_read = read(fd_source, s, 1024);
-		if (check_read < 0)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
-			exit(98);
-		}
 		check_write = write(fd_target, s, check_read);
-		if (check_write < 0)
+		if (check_write != check_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
 			exit(99);
