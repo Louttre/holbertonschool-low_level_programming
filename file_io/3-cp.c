@@ -25,6 +25,7 @@ void _cp(const char *source, const char *target)
 {
 	int check_write, fd_source, fd_target, check_read = 1;
 	char s[1024];
+	mode_t perm = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
 
 	fd_source = open(source, O_RDONLY);
 	if (fd_source < 0)
@@ -32,7 +33,7 @@ void _cp(const char *source, const char *target)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", source);
 		exit(98);
 	}
-	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	fd_target = open(target, O_CREAT | O_TRUNC | O_WRONLY, perm);
 	if (fd_target < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", target);
