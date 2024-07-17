@@ -3,9 +3,9 @@ section .data
     strlen: equ $-str
     
 section	.text
-    global _start
+ global main
 
-  _start:
+  main:
     mov eax,4
     mov ebx,1
     mov ecx,str
